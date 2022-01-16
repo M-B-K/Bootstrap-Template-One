@@ -1,108 +1,118 @@
-
-body{
-    font-family: 'Roboto', sans-serif;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-body::before{
-    content: "";
-    display: block;
-    height: 68px;
+body::before {
+  content: "";
+  display: block;
+  height: 68px;
 }
 
-.landing{
-    height: 100vh;
+.landing section {
+  height: calc(100vh - 68px);
 }
 
-.landing section{
-    height: calc(100vh - 68px);
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.hero{
-    display: flex;
-    justify-content: center;
-    align-items: center ;
+.trans1,
+.trans2,
+.trans3 {
+  position: relative;
+  overflow: hidden;
 }
 
-.trans1, .trans2, .trans3 {
-    position: relative;
-    overflow: hidden;
+.trans1:hover img,
+.trans3:hover img {
+  transform: rotate(5deg) scale(1.5);
 }
 
-.trans1:hover img, 
-.trans3:hover img{
-    transform: rotate(5deg)  scale(1.5);
-}
-
-.trans2:hover img{
-    transform: rotate(-5deg)  scale(1.5);
-
+.trans2:hover img {
+  transform: rotate(-5deg) scale(1.5);
 }
 
 .trans1 img,
-.trans2 img ,
+.trans2 img,
 .trans3 img {
-    max-width: 100%;
-    transition: 0.5s;
+  max-width: 100%;
+  transition: 0.5s;
 }
 
-
-
-
-.landImg{
-    position: relative;
-    animation: up-and-down 6s linear infinite;
+.landImg {
+  position: relative;
+  animation: up-and-down 5s linear infinite;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-@keyframes up-and-down{
-    0%   {
-        top: -25px;
-    }
-    50%  {
-        top:  50px
-    }
-    100%  {
-        top: -25px;
-    }
-}
-
-.navbar .container .navbar-collapse  .navbar-nav a:hover{
-    color: #0d6efd;
+@keyframes up-and-down {
+  0% {
+    top: -25px;
+  }
+  50% {
+    top: 50px;
+  }
+  100% {
+    top: -25px;
+  }
 }
 
-.navbar-brand{
-    font-weight: 900;
-    letter-spacing: 4px;
-    font-size: 28px;
+@media (max-width: 768px) {
+  .img-fluid {
+    width: 400px;
+  }
+}
+@media (max-width: 576px) {
+  .img-fluid {
+    width: 300px;
+  }
 }
 
-
-.form-control:focus, .accordion-button:focus{
-    box-shadow: 0 0 0 0.25rem rgb(13 202 240 / 25%);
-} 
-
-.backCover{
-    background-image: url("../img/landing.jpg");
-    border-bottom-right-radius: .25rem;
-    border-top-right-radius: .25rem;
-    background-size: cover;
+.navbar .container .navbar-collapse .navbar-nav a:hover {
+  color: #0d6efd;
 }
 
-.Shead{
-    padding-top: 100px;
+.navbar-brand {
+  font-weight: 900;
+  letter-spacing: 4px;
+  font-size: 28px;
+}
+
+.form-control:focus,
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgb(13 202 240 / 25%);
+}
+
+.backCover {
+  background-image: url("../img/landing.jpg");
+  border-bottom-right-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  background-size: cover;
+}
+
+.Shead {
+  padding-top: 100px;
 }
 
 .bi-emoji-sunglasses::before {
-line-height: 1.25;
+  line-height: 1.25;
 }
 
-.hove1, .hove2, .hove3, .hove4{
-width: 60px; 
-height: 2px;
-transition: 1s;
+.hove1,
+.hove2,
+.hove3,
+.hove4 {
+  width: 60px;
+  height: 2px;
+  transition: 1s;
 }
 
 .hovee1:hover .hove1,
 .hovee2:hover .hove2,
 .hovee3:hover .hove3,
-.hovee4:hover .hove4{
-    width: 100%;
+.hovee4:hover .hove4 {
+  width: 100%;
 }
